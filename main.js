@@ -16,7 +16,7 @@ function player_update(){
         player_object.scaleToHeight(150);
         player_object.set({
             top:player_y,
-            left:player_x,
+            left:player_x
         });
         canvas.add(player_object);
     });
@@ -28,7 +28,7 @@ function new_image(get_image){
         block_image_object.scaleToHeight(block_image_height);
         block_image_object.set({
             top:player_y,
-            left:player_x,
+            left:player_x
         });
         canvas.add(block_image_object);
     });
@@ -129,9 +129,9 @@ function down(){
 }
 function left(){
     if(player_x>0){
-        player_x = player_x + block_image_width;
+        player_x = player_x - block_image_width;
         console.log("Bloack image width = "+block_image_width);
-        console.log("when right arrow is pressed,X"+player_x+",Y ="+player_y);
+        console.log("when left arrow is pressed,X"+player_x+",Y ="+player_y);
         canvas.remove(player_object);
         player_update();
     }
